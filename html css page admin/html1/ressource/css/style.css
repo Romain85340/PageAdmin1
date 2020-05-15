@@ -1,0 +1,426 @@
+/* DOCUMENT INFORMATION
+    - Document: Page Admin
+    - Version : 1.0.0
+    - Author : Romain
+
+*/
+
+
+/* COLORS
+    -background sidebar: #47484b
+    - defaut body text 
+    -h1 
+    -h2 
+    -h3 
+
+    -button
+    -button: hover
+
+    -border
+    - icon:   
+*/
+
+
+
+/* FONTS
+    -default: font-family: 'Lora', serif;
+    - color: 
+
+
+*/
+
+
+/* CSS DIRECTORY
+    1. =GLOBAL
+    2. =HEADER
+    3. =SIDEBAR
+    
+    
+
+/*GLOBAL
+==================================*/
+
+h1 {
+    
+}
+
+
+h2 {
+    
+}
+
+
+h3 {
+    font-family: 'Lora', serif;
+    text-align: center;
+    
+}
+
+
+h4 {
+    font-family: 'Lora', serif;
+    text-align: center;
+    
+}
+
+/*HEADER AND SIDEBAR
+==================================*/
+
+
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    top: 0;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    z-index: 2;
+    
+}
+
+.left_area h1 {
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.left_area span {
+    color: #dd137d;
+}
+
+.logout_btn {
+    padding: 5px;
+    background-color: #dd137d;
+    font-family: 'Lora', serif;
+    color: black;
+    float: right;
+    margin-top: -30px;
+    margin-right: 40px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.logout_btn:hover {
+    background-color: #b8007d;
+    transition: 1s;
+    
+}
+
+.sidebar {
+    background-color: #47484b;
+    margin-top: 60px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+}
+
+.sidebar .profile-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.sidebar h2 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: white;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+.sidebar a:hover {
+    background-color: #dd137d;
+    transition: 1s;
+    
+}
+
+.sidebar i {
+    padding-right: 10px;
+}
+
+label #sidebar_btn {
+    z-index: 1;
+    color: white;
+    position: fixed;
+    cursor: pointer;
+    left: 300px;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+label #sidebar_btn: hover {
+    color: #dd137d;
+    
+}
+
+#check:checked ~ .sidebar{
+    left: -180px;
+}
+
+#check:checked ~ .sidebar a span {
+    display: none;
+}
+
+#check:checked ~ .sidebar a {
+    font-size: 20px;
+    margin-left: 160px;
+    width: 80px;
+}
+
+.content {
+    margin-left: 250px;
+    transition: 0.5s;
+    
+    
+}
+
+#check:checked ~ .content{
+    margin-left: 70px;
+    
+}
+
+.btn-test {
+    text-align: left !important;
+    padding: 0px 0px 0px 40px !important;
+}
+
+
+
+.btn-test2 {
+    padding: 0px 0px 0px 0px !important;
+    background-color: #47484b;
+}
+
+.btn-test3:hover {
+    background-color: #dd137d !important;
+    background-color: cover !important;
+}
+
+
+#check:checked ~ .sidebar .btn-test3 {
+    font-size: 15px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#check:checked ~ .sidebar .btn-test3:hover {
+    background-color: #dd137d;
+    background-size: cover !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*GRAPHIQUE1
+==================================*/
+
+
+.graphique {
+    margin-top: 120px;
+}
+
+
+.encadre {
+    padding: 20px;
+    background-color: rgba(0,0,0,0.1);
+    border: 3px solid rgba(0,0,0,1);
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.graphique1 {
+    padding: 20px;
+    background-color: rgba(0,0,0,0.1);
+    border: 3px solid rgba(0,0,0,1);
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.graphique2 {
+    padding: 20px;
+    background-color: rgba(0,0,0,0.1);
+    border: 3px solid rgba(0,0,0,1);
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+
+/* MAP
+==================================*/
+
+
+
+.encadre-map {
+    padding: 20px;
+    background-color: rgba(0,0,0,0.1);
+    border: 3px solid rgba(0,0,0,1);
+    border-radius: 30px;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+
+
+.map {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+
+/* GRAPHIQUE 2EME PARTIE
+==================================*/
+
+
+
+.titre-encadre {
+    background-color: cornflowerblue;
+    border: 5px solid black;
+    border-radius: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    transition: 1.5s;
+    
+    
+}
+
+.titre-encadre:hover {
+    background-color: cyan;
+    margin-top: 40px;
+    transition: 1.5s;
+    
+}
+
+.btn-graph {
+    background-color: gray;
+    margin-top: 10px;
+    
+}
+
+/* GRAPHIQUE 2EME PARTIE
+==================================*/
+
+table {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s;
+}
+
+table:hover {
+    transform: scale(1.25) rotate(360deg);
+    transition: 2s;
+}
+
+td {
+    border: 2px solid gray;
+    text-align: center;
+    padding: 5px;
+}
+
+.ligne1 {
+    background-color: rgba(0,0,0,1);
+    color: white;
+}
+
+
+
+.ligne {
+    background-color: rgba(0,0,0,0.3);
+}
+
+
+
+
+
+/*CONNECTION
+==================================*/
+
+.connect {
+    background-image: url(../Image/shoot-n-design-71270-unsplash.jpg);
+    background-size: cover;
+    height: 100vh;
+    
+}
+
+.image img {
+    display: block;
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.connection {
+    margin-top: 30px;
+    text-align: center;
+    padding: 10px 10px 5px;
+    background-color: rgba(0,0,0,0.1);
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+
+.connection input {
+    width: 150px;
+    height: 20px;
+    border: 2px solid black;
+    background-color: #03aee2;
+}
+
+
+.btn-connexion {
+    display: block;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 30px;
+    color: blue;
+    background-color: #03aee2;
+    border: 2px solid #0000fa;
+    border-radius: 20px;
+    transition: 1.5s;
+}
+
+.btn-connexion:hover {
+    background-color: #0780af;
+    transform: scale(1.25)
+}
+
+
+

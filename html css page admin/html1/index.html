@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title>Page Admin</title>
+        
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-----SIDEBAR----->
+        
+        <link rel="stylesheet" href="ressource/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        
+        
+        <!-----ICON----->
+        
+        <script src="https://kit.fontawesome.com/c633fbfc2f.js" crossorigin="anonymous">
+        </script>
+        
+        
+        
+        <!-----FONT----->
+        
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="ressource/css/style.css">
+        
+        
+        
+        <!-----STYLE----->
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="ressource/css/style.css" >
+        
+        <!----SCRIPT CHART.JS---->
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <link rel="stylesheet" href="ressource/css/style.css" >
+        
+        
+    </head>
+    
+    
+    <body>
+        
+        <!---Header--->
+        
+        <input type="checkbox" id="check">    
+        <header>
+            <label for="check">
+                <i class="fas fa-align-justify" id="sidebar_btn"></i>
+            </label>
+            <div class="left_area">
+                <h1>ROMAIN <span>AUBRY</span></h1>
+            </div>
+            
+            <div class="right_area">
+                <a href="connect.html" class="logout_btn">Logout</a>
+            </div>
+        </header>
+        
+        <!---Sidebar--->
+        
+        <div class="sidebar">
+            <center>
+                <img src="ressource/Image/Bonhomme_2_C3661857_.png" class="profile-image" alt="">
+                <h2>Romain</h2>
+            </center>
+            <a class="btn dropdown-toggle btn-test"  href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-align-justify"></i><span>Dashboard</span> 
+            </a>
+
+            <div class="dropdown-menu btn-test2" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item btn-test3" href="#">Test1</a>
+                <a class="dropdown-item btn-test3" href="#">Test2</a>
+                <a class="dropdown-item btn-test3" href="#">Test3</a>
+            </div>
+            <a href="https://romain85340.github.io/progideal/" target="_blank"><i class="fas fa-align-justify"></i><span>Site Progideal</span></a>
+            <a href="/"><i class="fas fa-align-justify"></i><span>Tables</span></a>
+            <a href="/"><i class="fas fa-align-justify"></i><span>Forms</span></a>
+            <a href="/"><i class="fas fa-align-justify"></i><span>About</span></a>
+            <a class="btn dropdown-toggle btn-test"  href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-align-justify"></i><span>About</span> 
+            </a>
+
+            <div class="dropdown-menu btn-test2" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item btn-test3" href="#" style="background-color: #47484b">Test1</a>
+                <a class="dropdown-item btn-test3" href="#">Test2</a>
+                <a class="dropdown-item btn-test3" href="/">Test3</a>
+            </div>
+        </div>
+        
+        <div class="content">
+        
+        
+        <!---GRAPHIQUE--->
+        
+            <section class="graphique">
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="encadre">
+                            <h3>Visite hebdomadaire :</h3>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="graphique1">
+                        <h4>Nombre de visite :</h4>
+                        
+                        <canvas id="myChart"></canvas>
+                        
+                        <script>
+                          
+                            var ctx = document.getElementById('myChart');
+                                var myChart = new Chart(ctx, {
+                                type: 'bar',
+                                data: {
+                                labels: ['Lundi', 'Mardi', 'Mecredi', 'Jeudi', 'Vendredi', 'Samedi','Dimanche'],
+                                datasets: [{
+                                label: 'Visite',
+                                data: [12, 19, 3, 5, 2, 3,22],
+                                backgroundColor: [
+                                'rgba(255, 99, 132, 0.5)',
+                                'rgba(54, 162, 235, 0.5)',
+                                'rgba(255, 206, 86, 0.5)',
+                                'rgba(75, 192, 192, 0.5)',
+                                'rgba(153, 102, 255, 0.5)',
+                                'rgba(255, 159, 64, 0.5)',
+                                'rgba(255, 150, 255, 0.5)'
+                                ],
+                                borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)',
+                                'rgba(255, 150, 255, 1)'
+                                ],
+                                borderWidth: 1
+                                }]
+                                },
+                                    options: {
+                                    scales: {
+                                    yAxes: [{
+                                    ticks: {
+                                    beginAtZero: true
+                                        }
+                                        }]
+                                        }
+                                        }
+                                        });
+                            
+                            
+                            
+                        </script>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="graphique2">
+                            <h4>Temps de visite :</h4>
+                            
+                            <canvas id="myChart2"></canvas>
+                        
+                            <script>
+                             var ctx = document.getElementById('myChart2');
+                                var myChart = new Chart(ctx, {
+                                type: 'pie',
+                                data: {
+                                labels: ['Lundi', 'Mardi', 'Mecredi', 'Jeudi', 'Vendredi', 'Samedi','Dimanche'],
+                                datasets: [{
+                                label: 'Minute en moyenne',
+                                data: [15, 6, 10, 5, 2, 17,22],
+                                backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)',
+                                'rgba(255, 150, 255, 0.2)'
+                                ],
+                                borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)',
+                                'rgba(255, 150, 255, 1)'
+                                ],
+                                borderWidth: 1
+                                }]
+                                },
+                                    options: {
+                                    scales: {
+                                    yAxes: [{
+                                    ticks: {
+                                    beginAtZero: true
+                                        }
+                                        }]
+                                        }
+                                        }
+                                        });
+                        
+                            </script>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                </div>
+            </section>
+            
+            
+            <!---MAP--->
+            
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="encadre-map">
+                                <h3>Nos visiteurs sont :</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d46838365.030094765!2d16.191845252591126!3d44.23204498112503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1589466035560!5m2!1sfr!2sfr" width="900" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            
+            
+            </section>
+            
+            
+            <!---GRAPHIQUE 2EME PARTIE--->
+            
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="titre-encadre">
+                                <h3>Graphique 2eme partie :</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="tableau">  
+                                <table>
+                                    <tr class="ligne1">
+                                        <td>1ere colonne</td>
+                                        <td>2eme colonne</td>
+                                        <td>3eme colonne</td>
+                                        <td>4eme colonne</td>
+                                        <td>5eme colonne</td>
+                                    </tr>
+                                    <tr class="ligne">
+                                        <td>2eme ligne 1ere colonne</td>
+                                        <td>2eme ligne 2eme colonne</td>
+                                        <td>2eme ligne 3eme colonne</td>
+                                        <td>2eme ligne 4eme colonne</td>
+                                        <td>2eme ligne 5eme colonne</td>
+                                    </tr>
+                                    <tr class="ligne">
+                                        <td>3eme ligne 1ere colonne</td>
+                                        <td>3eme ligne 2eme colonne</td>
+                                        <td>3eme ligne 3eme colonne</td>
+                                        <td>3eme ligne 4eme colonne</td>
+                                        <td>3eme ligne 5eme colonne</td>
+                                    </tr>
+                                    <tr class="ligne">
+                                        <td>4eme ligne 1ere colonne</td>
+                                        <td>4eme ligne 2eme colonne</td>
+                                        <td>4eme ligne 3eme colonne</td>
+                                        <td>4eme ligne 4eme colonne</td>
+                                        <td>4eme ligne 5eme colonne</td>
+                                    </tr>
+                                    <tr class="ligne">
+                                        <td>5eme ligne 1ere colonne</td>
+                                        <td>5eme ligne 1ere colonne</td>
+                                        <td>5eme ligne 1ere colonne</td>
+                                        <td>5eme ligne 1ere colonne</td>
+                                        <td>5eme ligne 1ere colonne</td>
+                                    </tr>
+                                    <tr class="ligne">
+                                        <td>6eme ligne 1ere colonne</td>
+                                        <td>6eme ligne 1ere colonne</td>
+                                        <td>6eme ligne 1ere colonne</td>
+                                        <td>6eme ligne 1ere colonne</td>
+                                        <td>6eme ligne 1ere colonne</td>
+                                    </tr>
+                                </table>
+                            </div>
+                         </div>
+                    
+                    
+                    
+                    </div>
+                </div>
+            </section>
+            
+
+            
+            
+            
+            
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    </body>
+
+
+
+
+
+
+
+</html>
